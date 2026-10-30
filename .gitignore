@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# Skill run artifacts (reconstruction workdirs)
+**/work/
+*-reconstruction/
+*.pdf
+!**/assets/**
+
+# Secrets / local env
+.env
+.env.*
+*.pem
+*.key
+credentials.json

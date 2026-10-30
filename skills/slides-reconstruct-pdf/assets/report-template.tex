@@ -1,0 +1,115 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[fontset=fandol]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage[margin=2.35cm]{geometry}
+\usepackage[most]{tcolorbox}
+\usepackage{booktabs,longtable,tabularx}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+\usepackage{listings}
+
+\definecolor{ink}{HTML}{25313D}
+\definecolor{muted}{HTML}{66727E}
+\definecolor{directBg}{HTML}{EDF5F1}
+\definecolor{directFrame}{HTML}{6B9B82}
+\definecolor{claimBg}{HTML}{EEF3F8}
+\definecolor{claimFrame}{HTML}{527A9E}
+\definecolor{reconBg}{HTML}{FBF5E8}
+\definecolor{reconFrame}{HTML}{A77A2D}
+\definecolor{uncertainBg}{HTML}{FAEEEE}
+\definecolor{uncertainFrame}{HTML}{A65B5B}
+
+\hypersetup{colorlinks=true,linkcolor=claimFrame,urlcolor=claimFrame,citecolor=claimFrame}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{muted}{\reportshorttitle}}
+\fancyhead[R]{\small\textcolor{muted}{Slides Reconstruction}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+
+\tcbset{evidencebox/.style={
+  enhanced,breakable,boxrule=0.75pt,arc=1.5pt,
+  left=3mm,right=3mm,top=2mm,bottom=2mm,
+  fonttitle=\bfseries,coltitle=white
+}}
+\newtcolorbox{sourcebox}[1]{evidencebox,colback=directBg,colframe=directFrame,colbacktitle=directFrame,title={E0 直接证据：#1}}
+\newtcolorbox{claimbox}[1]{evidencebox,colback=claimBg,colframe=claimFrame,colbacktitle=claimFrame,title={E1 跨页结论：#1}}
+\newtcolorbox{reconstructbox}[1]{evidencebox,colback=reconBg,colframe=reconFrame,colbacktitle=reconFrame,title={E2 可能讲述：#1}}
+\newtcolorbox{uncertaintybox}[1]{evidencebox,colback=uncertainBg,colframe=uncertainFrame,colbacktitle=uncertainFrame,title={不确定性：#1}}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny\color{muted},
+  captionpos=b
+}
+
+% Fill these fields before compiling.
+\newcommand{\reporttitle}{[课程或幻灯片标题]}
+\newcommand{\reportshorttitle}{[短标题]}
+\newcommand{\reportsubtitle}{基于幻灯片证据的课程重建笔记}
+\newcommand{\sourceauthor}{[作者或机构，未知则写“未确认”]}
+\newcommand{\sourcefiles}{[源文件名列表]}
+\newcommand{\reconstructiondate}{\today}
+\newcommand{\coverimagepath}{}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{1.0cm}
+{\Huge\bfseries\color{ink}\reporttitle\par}
+\vspace{0.5cm}
+{\Large\color{muted}\reportsubtitle\par}
+\vspace{0.9cm}
+
+\ifdefempty{\coverimagepath}{}{
+  \includegraphics[width=0.9\textwidth,height=0.48\textheight,keepaspectratio]{\coverimagepath}\par
+  \vspace{0.7cm}
+}
+
+\vfill
+\begin{tcolorbox}[width=0.92\textwidth,colback=black!2,colframe=black!45,arc=1.5pt]
+\textbf{原作者/机构}：\sourceauthor\par
+\textbf{源文件}：\sourcefiles\par
+\textbf{重建日期}：\reconstructiondate\par
+\textbf{说明}：本报告依据幻灯片重建最可能的课程论证，不声称恢复演讲者的逐字原话。
+\end{tcolorbox}
+\end{titlepage}
+
+\section*{阅读说明}
+\addcontentsline{toc}{section}{阅读说明}
+本文使用四级证据标记：E0 为页面直接证据，E1 为跨页强推断，E2 为可能的现场讲述，E3 为外部背景。推断与外部补充不得被当作原作者的确定表述。
+
+\tableofcontents
+\newpage
+
+% Required outline:
+% \section{课程论证地图}
+% \section{... reconstructed teaching sections ...}
+% \section{逐页重建索引}
+% \section{总结、边界与延伸}
+%
+% Use sourcebox, claimbox, reconstructbox, and uncertaintybox only when the
+% distinction materially helps the reader. Keep figures outside boxes.
+% Every figure caption must identify the source deck and slide number.
+
+\section{课程论证地图}
+[在此写入核心问题、最可能的中心主张、章节关系和关键不确定性。]
+
+\section{逐页重建索引}
+[在此覆盖每一页的功能、核心观点、证据等级、置信度和正文位置。]
+
+\section{总结、边界与延伸}
+[在此总结最可靠的结论、论证连接、缺失前提、歧义以及需要原始录像或作者确认的问题。]
+
+\end{document}
