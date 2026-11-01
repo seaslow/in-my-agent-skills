@@ -25,7 +25,7 @@ git clone https://github.com/seaslow/in-my-agent-skills.git
 mkdir -p ~/.agents/skills
 cp -R in-my-agent-skills/skills/* ~/.agents/skills/
 # or symlink individual skills:
-# ln -s "$(pwd)/in-my-agent-skills/skills/slides-reconstruct-pdf" ~/.agents/skills/slides-reconstruct-pdf
+# ln -s "$(pwd)/in-my-agent-skills/skills/notes2deck" ~/.agents/skills/notes2deck
 ```
 
 **Project-local:**
@@ -41,7 +41,8 @@ Exact discovery paths may vary by host (Cursor, Claude Code, Codex, etc.). Prefe
 
 | Skill | Description |
 |-------|-------------|
-| [`slides-reconstruct-pdf`](skills/slides-reconstruct-pdf/) | Reconstruct the likely lecture/argument behind PPTX or slide PDFs into a figure-rich course-note PDF, with slide-grounded evidence and uncertainty labels. |
+| [`notes2deck`](skills/notes2deck/) | Turn study material (a textbook chapter or section, PPTX/PDF slides, or lecture PDFs) into a polished, figure-rich, evidence-labelled course handout PDF; and, only when the user explicitly asks for a PPT/deck, also a presentation .pptx built from that handout. |
+| [`bilibili-render-pdf`](skills/bilibili-render-pdf/) | Generate a professional, detailed, figure-rich LaTeX course note and final PDF from a Bilibili lecture, tutorial, or technical talk. |
 
 ## License
 
