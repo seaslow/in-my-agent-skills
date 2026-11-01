@@ -23,6 +23,12 @@
 \definecolor{reconFrame}{HTML}{A77A2D}
 \definecolor{uncertainBg}{HTML}{FAEEEE}
 \definecolor{uncertainFrame}{HTML}{A65B5B}
+\definecolor{intuitBg}{HTML}{F3EEF8}
+\definecolor{intuitFrame}{HTML}{7D5BA6}
+\definecolor{exBg}{HTML}{FFF8EC}
+\definecolor{exFrame}{HTML}{C26B1A}
+\definecolor{extBg}{HTML}{F2F2F2}
+\definecolor{extFrame}{HTML}{707070}
 
 \hypersetup{colorlinks=true,linkcolor=claimFrame,urlcolor=claimFrame,citecolor=claimFrame}
 \setlength{\parindent}{0pt}
@@ -43,6 +49,10 @@
 \newtcolorbox{claimbox}[1]{evidencebox,colback=claimBg,colframe=claimFrame,colbacktitle=claimFrame,title={E1 跨页结论：#1}}
 \newtcolorbox{reconstructbox}[1]{evidencebox,colback=reconBg,colframe=reconFrame,colbacktitle=reconFrame,title={E2 可能讲述：#1}}
 \newtcolorbox{uncertaintybox}[1]{evidencebox,colback=uncertainBg,colframe=uncertainFrame,colbacktitle=uncertainFrame,title={不确定性：#1}}
+% Optional boxes (both modes). In textbook mode retitle E0 as 教材原文, E1 as 要点归纳, E2 as 讲解建议, uncertainty as 注意 / 存疑.
+\newtcolorbox{intuitionbox}[1]{evidencebox,colback=intuitBg,colframe=intuitFrame,colbacktitle=intuitFrame,title={直觉：#1}}
+\newtcolorbox{examplebox}[1]{evidencebox,colback=exBg,colframe=exFrame,colbacktitle=exFrame,title={算例：#1}}
+\newtcolorbox{externalbox}[1]{evidencebox,colback=extBg,colframe=extFrame,colbacktitle=extFrame,title={E3 外部补充：#1}}
 
 \lstset{
   basicstyle=\ttfamily\small,

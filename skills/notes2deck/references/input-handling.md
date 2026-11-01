@@ -49,3 +49,14 @@ Inventory audio, video, OLE objects, and embedded files without executing them.
 State the limitation near the beginning of the report: the reconstruction is based on final rendered pages and cannot reliably recover notes, builds, hidden material, or embedded-object semantics.
 
 Use text extraction only for indexing. Inspect each page image directly for layout, figures, equations, and hierarchy.
+
+## Textbook Mode
+
+Input is a textbook chapter or section, usually a scanned PDF. The user may delete a large book after one use; keep page renders in `work/rendered-pages/` so later edits do not need the book again.
+
+- Anchor every claim to **book page numbers** (state the offset if PDF page ≠ printed page).
+- Keep the book's numbering for sections, definitions, theorems, algorithms, examples, figures and equations, e.g. 定理 3.20, 算法 3.9, (3.84).
+- E0 = 教材原文 (what the book prints), E1 = 要点归纳, E2 = 讲解建议 (your explanation or analogy), E3 = 外部补充 with link.
+- Recompute every worked example (exact fractions where possible). If the book has a typo, keep the book's text visible and flag it in a 注意 box with the page number; never silently correct.
+- Reproduced plots or numbers (e.g. iteration paths, iteration counts) are labelled 本文复现 and state the settings used (line search, stopping rule).
+- The slides-mode "reconstruction notice" becomes a short 说明 of scope: book, section, pages, evidence labels, and what was verified.

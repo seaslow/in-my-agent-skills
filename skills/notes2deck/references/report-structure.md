@@ -61,3 +61,11 @@ End with `总结、边界与延伸`, containing:
 - questions that a recording, transcript, or author could resolve
 
 Do not add generic study tips or speculative future work unless the material supports them.
+
+## Textbook Mode Adjustments
+
+- Main sections follow the book's own section order and titles (e.g. 3.4.1 … 3.4.5).
+- Replace `逐页重建索引` with a compact `教材页码索引`: book page → handout section.
+- Include a figure of a reproduced result on the title page when one exists (it doubles as the deck's motivation figure).
+- End with `总结与延伸`: core results, how they connect, typos found, and external context kept separate.
+- Pitch the explanation at a newcomer: intuition before formula, define every symbol, step-by-step arithmetic for worked examples.

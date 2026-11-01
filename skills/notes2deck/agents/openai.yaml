@@ -1,0 +1,4 @@
+interface:
+  display_name: "Notes2Deck"
+  short_description: "Turn textbooks or slides into an evidence-grounded handout, and a presentation deck on request"
+  default_prompt: "Use $notes2deck to turn this material into an evidence-grounded course handout PDF."
